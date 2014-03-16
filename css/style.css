@@ -1,0 +1,52 @@
+*{
+margin: 0;
+}
+#header h1{
+	font-family: consolas;
+	font-weight: bold;
+	font-size: 60px;
+	text-transform: capitalize;
+	padding-top: 10px;
+	text-align: center;
+}
+#header{
+
+    background-color: #CCCCCC;
+	padding-bottom:20px;
+}
+
+img.left {
+	float: left;
+	
+}
+
+img{
+	margin-top: 60px;
+}
+#main{
+	height: 500px;
+	background-color: #3CA375;
+}
+#footer p{
+	text-align: center;
+	font-size: 20px;
+	font-family: consolas;
+	padding-top: 10px;
+}
+ img.right {
+	float:right;
+}
+#story p{
+	font-size: 18px;
+	text-align: center;
+}
+
+#story{
+	padding-top: 120px;
+}
+
+#stress {
+	font-size: 40px;
+	text-align: center;
+	margin-top: 20px;
+}
