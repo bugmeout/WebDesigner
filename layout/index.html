@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript">
+	function bgChange () {
+		if (!document.getElementsByTagName) {
+			return false;
+		}
+		var tables = document.getElementsByTagName("ul");
+		for (var i = 0; tables.length; i++) {
+			var odd= false;
+			trs = tables[i].getElementsByTagName("li");
+			for (var j =0; j< trs.length; j++) {
+				if (odd == true) {
+					trs[j].style.background = "#666";
+					odd = false;
+				} else {
+					odd = true;
+				}
+			}
+		}
+	}
+	window.onload= bgChange;
+	</script>
+</head>
+<body>
+	<ul>
+		<li><a href="#">隔行换色的方法</a></li>
+		<li><a href="#">隔行换色的方法</a></li>
+		<li><a href="#">隔行换色的方法</a></li>
+		<li><a href="#">隔行换色的方法</a></li>
+		<li><a href="#">隔行换色的方法</a></li>
+		<li><a href="#">隔行换色的方法</a></li>
+		<li><a href="#">隔行换色的方法</a></li>
+	</ul>
+	<div id="helo">
+		hello
+	</div>
+</body>
+</html>

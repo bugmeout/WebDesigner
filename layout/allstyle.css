@@ -1,0 +1,52 @@
+*{
+	margin:0;
+	padding:0;
+}
+#nav{
+	height: 30px;
+}
+#nav ul{
+	list-style: none;
+	font-size: 12px;
+	font-family: Arial,consolas;
+	margin-left: 20px;
+}
+#nav ul li{
+	float: left;
+	margin-right: 1px;
+	position: relative;
+}
+#nav ul li a{
+	line-height: 23px;
+	text-decoration: none;
+	background: #ffcbf5;
+	color:#a40084;
+	display: block;
+	width: 105px;
+	height: 25px;
+	text-align: center;
+	overflow: hidden;
+	margin-top: 7px;
+}
+#nav ul li a:hover span{
+	display: block;
+	width: 105px;
+	height: 30px;
+	position: absolute;
+	top:0;
+	left:0;
+	padding-top: 2px;
+}
+#nav ul li a span{
+	display: none;
+}
+#nav ul li a:hover,#nav ul li a:hover span{
+	color:#fff;
+	background: #ff02cd;
+}
+#navbar{
+	background: url(nav_bar.jpg);
+	height: 15px;
+	overflow: hidden;
+	clear: both;
+}

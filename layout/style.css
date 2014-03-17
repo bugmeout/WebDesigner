@@ -1,0 +1,39 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+ul{
+	background-color: #333;
+	padding:0;
+	margin:0;
+	height: 30px;
+}
+li{
+	line-height: 30px;
+	font-size: 14px;
+	font-family: Verdana,Sans-serif;
+	color:#fff;
+	width: 150px;
+	float: left;
+	margin: 0 20px;
+	list-style-type: none;
+}
+a{
+	color:#fff;
+	text-decoration: none;
+	display: block;
+	width: auto;
+	line-height: 30px;
+	padding-left: 20px;
+}
+a:hover{
+	background-color: #ffc;
+	color:#390000;
+	font-weight: bold;
+	letter-spacing: .1em;
+}
+#helo{
+	width: auto;
+	height: auto;
+	background-color: #2f2;
+}

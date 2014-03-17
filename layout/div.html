@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="divsytle.css">
+	<title>DivTest</title>
+	<script type="text/javascript">
+	var divW = 100;
+	var divH = 100;
+	var bd = 0;
+	var setTover;
+	var setTout;
+	function over () {
+		clearTimeout(setTout);
+		var d = document.getElementsByTagName("div")[0];
+		divW +=10;
+		divH +=10;
+		bd++;
+		if (divW>200) {
+			clearTimeout(setTover);
+			return;
+		}
+		d.style.width=divW+"px";
+		d.style.height=divH+"px";
+		d.style.lineHeight=divH+"px";
+		d.style.marginLeft =(-divW/2)+"px";
+		d.style.marginTop= (-divH/2)+"px";
+		d.style.background= "rgb(0,"+divW+","+divW+")";
+		d.style.fontSize = divW/10+"px";
+		d.style.border = "#ff7e00 solid 1px";
+		d.style.borderWidth = bd+"px";
+		setTover = setTimeout(over,10);
+	}
+
+	function out () {
+		clearTimeout(setTover);
+		var d = document.getElementsByTagName("div")[0];
+		divW -=10;
+		divH -=10;
+		bd--;
+		if (divW <100) {
+			clearTimeout(setTout);
+			return;
+		}
+		d.style.width=divW+"px";
+		d.style.height=divH+"px";
+		d.style.lineHeight=divH+"px";
+		d.style.marginLeft =(-divW/2)+"px";
+		d.style.marginTop= (-divH/2)+"px";
+		d.style.background= "rgb(0,"+divW+","+divW+")";
+		d.style.fontSize = divW/10+"px";
+		d.style.border = "#ff7e00 solid 1px";
+		d.style.borderWidth = bd+"px";
+		setTout = setTimeout(out,10);
+	}
+	</script>
+</head>
+<body>
+	<div class="normal" onmouseover="over()" onmouseout="out()" >box</div>
+</body>
+</html>
