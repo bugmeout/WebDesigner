@@ -224,3 +224,5 @@ a [example](http://www.baidu.com "title") good;
 <hicode@foxmail.com>
 
 ![wrong picutre ](http://e.hiphotos.baidu.com/image/w%3D2048/sign=43c63108a2ec08fa260014a76dd63c6d/2934349b033b5bb57d2fb54934d3d539b700bc89.jpg "hello")
+
+#[reference](http://wowubuntu.com/markdown/)
