@@ -26,7 +26,7 @@ while ($row=mysql_fetch_row($result)) {
 		echo "</font>";
 	} else {
 		echo "</td>【";
-		echo "<a href='member_info.php' target='_bank'>";
+		echo "<a href='member_info.php?mem_name=$name'"." target='_bank'>";
 		echo "$name";
 		echo "</a>";
 		echo "】</td>";

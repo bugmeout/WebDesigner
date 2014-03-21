@@ -11,8 +11,11 @@
 
 	<?php
 	require 'redirect.php'; 
-	$user=$_SESSION['user_name'];
+
 	require 'dbcon.php';
+		$user=$_SESSION['user_name'];
+		if(!empty($_GET))
+			$user=$_GET['mem_name'];
 	$str= "select * from member where nickname='$user';";
 	$result= mysql_query($str,$link_id);
 	list($id,$nickname,$name,$password,$sex,$age,$email)= mysql_fetch_row($result);
