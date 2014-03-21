@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Drag test: HTML5 New feature test</title>
+
+<style type="text/css">
+	
+	#dropbox{
+		float: left;
+		width: 500px;
+		height: 300px;
+		margin: 10px;
+		border:1px solid #999999;
+	}
+	#picbox{
+		float: left;
+		width: 320px;
+		/*height: 20px;*/
+		margin: 10px;
+		border:1px solid #999999;
+		/*overflow: hidden;*/
+	}
+	#picbox img{
+		float: left;
+		padding: 5px;
+	}
+</style>
+<script type="text/javascript">
+	function initiate () {
+		source1 = document.getElementById("image");
+		source1.addEventListener('dragstart', dragged,false);
+
+		drop = document.getElementById('dropbox');
+		drop.addEventListener('dragenter', function(e){ e.preventDefault();},false);
+		drop.addEventListener('dragover', function(e){ e.preventDefault();},false);
+		drop.addEventListener('drop', dropped,false);
+	}
+	function dragged (e) {
+		var code = '<img src="'+source1.getAttribute('src')+'">';
+		e.dataTransfer.setData('Text',code);
+	}
+	function dropped (e) {
+		e.preventDefault();
+		drop.innerHTML l=e.dataTransfer.getData('Text');
+	}
+
+	window.addEventListener('load',initiate,false);
+</script>
+</head>
+<body>
+	<section id="dropbox">drag and drop the image here</section>
+	<section id="picbox"><img src="http://minkbooks.com/content/monster1.gif" alt="" id="image"></section>
+</body>
+</html>

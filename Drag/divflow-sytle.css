@@ -1,0 +1,58 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+#main{
+	width: 500px;
+	height: 400px;
+	margin: 0 auto;
+	border:1px solid #999999;
+	padding: 2em;
+	text-align: center;
+	line-height: 400px;
+	overflow: hidden;
+
+}
+#content{
+	width: 400px;
+	height: 300px;
+	margin: 0 auto;
+	border:1px solid #888888;
+	background-color: #123423;
+}
+#other{
+	width: 300px;
+	height: 300px;
+	border:1px solid #888888;
+	/*margin-left: 200px;*/
+	float: left;
+}
+
+img{
+	width: 100px;
+	height: 100px;
+
+}
+div.another{
+	width: 300px;
+	height: 300px;
+	border:1px solid #888888;
+
+float: left;
+
+
+}
+#bingo{
+	width: 300px;
+	height: 300px;
+	/*margin-top: 100px;*/
+	border:1px solid #112233;
+	background-color: #4Df;
+
+}
+
+#last-test{
+	width: 300px;
+	height: 300px;
+	border:1px solid #888888;
+}
