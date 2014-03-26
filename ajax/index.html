@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ajax test</title>
+	<script type="text/javascript">
+	function loadXMLDoc () {
+		xmlhttp= new XMLHttpRequest();
+		xmlhttp.open("GET","fix.php",true);
+		xmlhttp.send();
+		if(xmlhttp.readyState== 4 && xmlhttp.status==200)
+		document.getElementById('myDiv').innerHTML +=xmlhttp.responseText;
+		//连接状态判断，
+	}
+	</script>
+</head>
+<body>
+	<div id="myDiv">
+		<h3>Let AJAX change this text</h3>
+	</div>
+	<button type="button" onclick="loadXMLDoc()">Change Content</button>
+</body>
+</html>
