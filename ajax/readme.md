@@ -13,3 +13,6 @@
 		xmlhttp.send();
 		// document.getElementById('myDiv').innerHTML =xmlhttp.responseText;
 	}
+
+* index.html is the first wrong example ,because there's 	no statechange statement.
+* temp.html is the modified one,i fix the index.html ,add 	the `statement` ,can be my example.
