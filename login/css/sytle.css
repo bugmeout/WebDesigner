@@ -1,0 +1,23 @@
+body,html{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+
+}
+div{
+	background-color: #F1F1F1;
+	width: 400px;
+	height: 200px;
+	border:1px solid #2B4231;
+	border-radius: 20px;
+	position: relative;
+	padding-top: 50px;
+	margin:0 auto;
+	text-align: center;
+}
+h1{
+	font-size: 50px;
+	font-family: Consolas;
+	text-align: center;
+}

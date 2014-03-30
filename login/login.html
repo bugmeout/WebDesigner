@@ -1,0 +1,38 @@
+<!-- 已经完成了ajax测试用户名是否存在，没有往数据库中插入元素，明天完成这一部分，还有main函数的页面跳转 -->
+
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Login</title>
+	 <script type="text/javascript">
+	function redirect () {
+		window.location='register.html';
+	}
+	function checkvalid () {
+		// if(!document.getElementsByTagName('input')[0].value.length*document.getElementsByTagName('input')[1].value.length){不支持!0为真判断
+			if(document.getElementsByTagName('input')[0].value.length*document.getElementsByTagName('input')[1].value.length==0){
+			alert("用户名或者密码不能为空");
+			return false;
+		}
+	}
+	</script>
+	<link rel="stylesheet" type="text/css" href="css/sytle.css">
+</head>
+
+<body>
+<h1>welcome to the login test made using PHP</h1>
+	<div id="myform">
+		<form action="check.php" method="post" onsubmit="return checkvalid()">
+			Username:<input type="text" name="user" id="user">
+			<span></span>
+			<br/>
+			Password:<input type="password" name="pass"><span></span><br/>
+			<input type="button" name="register" value="注册" onclick="redirect()">
+		<input type="submit" name="submit" value="submit" >
+		</form>
+	</div>
+</body>
+</html>
+

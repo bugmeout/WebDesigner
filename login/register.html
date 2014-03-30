@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Register</title>
+	<link rel="stylesheet" type="text/css" href="css/sytle.css">
+	<script type="text/javascript">
+	function clear () {
+		document.getElementById('user').value="";
+	}
+	function checkvalid () {
+		xmlhttp = new XMLHttpRequest();
+		xmlhttp.onreadystatechange=function()
+		{
+			if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+				var isExist = xmlhttp.responseText;
+				if(isExist >= 1)
+				{
+					// alert("test");
+					 // document.getElementsByTagName('span').innerHTML= "用户名已存在."
+					 document.getElementsByTagName('span')[0].innerHTML= "用户名已存在.";
+				}
+				else{
+					 document.getElementsByTagName('span')[0].innerHTML='';
+				}
+			}
+		}
+		// xmlhttp.open("get","main.php?name="+document.getElementById('user').innerHTML,true);
+			xmlhttp.open("get","renameCheck.php?name="+document.getElementById('user').value,true);
+		xmlhttp.send();
+	}
+
+	function localcheck() {
+		//unique username
+		if(document.getElementsByTagName('span')[0].innerHTML!=''){
+				alert("用户名已存在，请重新输入");
+				document.getElementById('user').value='';
+			return false;
+		}
+		//info Integrity
+		var length=document.getElementsByTagName('input')[0].value.length*document.getElementsByTagName('input')[1].value.length*
+					document.getElementsByTagName('input')[2].value.length*document.getElementsByTagName('input')[3].value.length;
+		if (!length) {
+			alert("请填写完整信息");
+			return false;
+		}
+		//pass check
+		if (document.getElementsByTagName('input')[1].value!=document.getElementsByTagName('input')[2].value) {
+			alert("密码确认错误，请重新输入");
+			document.getElementsByTagName('input')[1].value="";
+			document.getElementsByTagName('input')[2].value="";
+			document.getElementsByTagName('input')[1].focus();
+			return false;
+		}
+		//email check
+		var emailValue=document.getElementsByTagName('input')[3].value;
+		if (!isEmail(emailValue)) {
+			alert("邮箱输入有误，请重新输入");
+			return false;
+		}
+
+	}
+			//email regex
+	 function isEmail(str){
+	 	 var reg = /^(\w)+(\.\w+)*@(\w)+((\.\w+)+)$/;
+	 	  return reg.test(str);
+	 	}
+	</script>
+</head>
+<body>
+	<div>
+		<form action="insert.php" method="post">
+			用户名：<input type="text" name="user" value=""	onblur="checkvalid()" id="user" ><span></span><br/>
+			密&nbsp;&nbsp;码：<input type="password"	name="pass"><br/>
+			确&nbsp;&nbsp;认：<input type="password"	name="pass2"><br/>
+			邮&nbsp;&nbsp;箱：<input type="text"	name="mail"><br/>
+<!-- 			<input type="submit" value="提交" onclick=" localcheck()">注意返回值的写法一定要加上return
+ -->			<input type="submit" value="提交" onclick="return localcheck()">
+		</form>
+	</div>
+</body>
+</html>
