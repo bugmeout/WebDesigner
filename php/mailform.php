@@ -11,7 +11,7 @@
 			$email = $_REQUEST['email'];
 			$subject = $_REQUEST['subject'];
 			$message = $_REQUEST['message'];
-			mail("hicode@foxmail.com", "Subject:$subject", $message, "From: $email");
+			mail("wulame@foxmail.com", "Subject:$subject", $message, "From: $email");
 			echo "Thank you for using our mail form";
 		} else {
 			# code...
